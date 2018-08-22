@@ -1,0 +1,7 @@
+@import '../components/navbar/navbar';
+@import '../components/sidebar/sidebar';
+
+.app-container {
+    padding-top: $navbar-height;
+    padding-left: $sidebar-width;
+}
