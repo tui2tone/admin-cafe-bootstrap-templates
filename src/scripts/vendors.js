@@ -1,4 +1,4 @@
 import '../styles/vendor.scss';
 
-import 'jquery';
 import 'bootstrap';
+import 'scrollpos-styler';

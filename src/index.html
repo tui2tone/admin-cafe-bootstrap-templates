@@ -4,9 +4,9 @@
     <title>Index</title>
 </head>
 
-<body>
+<body class="app-wrapper">
     <%= require('html-loader!./components/navbar/navbar.html') %>
-        <div class="app-wrapper" id="app-wrapper">
+        <div class="app-main-wrapper">
             <%= require('html-loader!./components/sidebar/sidebar.html') %>
             <main class="app-container">
                 <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">

@@ -2,9 +2,108 @@
     height: $navbar-height;
     padding-left: $sidebar-width;
     padding-right: 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease;
+    background-color: $color-black;
+    height: $navbar-height;
+    box-shadow: 1px 2px 4px 0 rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+
+        .nav-link {
+            color: $color-white;
+            padding-left: 5px;
+            padding-right: 5px;
+        
+        }
+    }
+
+    .nav-profile {
+        .nav-link {
+            color: $color-white;
+            display: flex;
+            align-items: center;
+
+            &::after {
+                display: none;
+            }
+
+            &:hover, &:active, &:focus {
+                color: $color-main;
+            }
+
+            .profile-img {
+                margin-left: 10px;
+                img {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .navbar-toggler {
+        background-color: transparent;
+        border: none;
+        color: $color-white;
+        margin-right: 15px;
+        font-size: 1.2rem;
+        display: block;
+    }
 }
 
-.nav-link {
-    padding-left: 5px;
-    padding-right: 5px;
+.app-wrapper.collapsed {
+    .navbar {
+        padding-left: $sidebar-collapse-width;
+    }
+}
+
+
+.navbar-search-container {
+    width: 100%;
+    position: relative;
+    background-color: $color-white;
+    border-radius: 3px;
+    margin-bottom: 0;
+
+    .form-control {
+        position: relative;
+        width: 100%;
+        height: $navbar-height - 20px;
+        padding: 10px;
+        z-index: 1001;
+        background-color: transparent;
+        margin-right: 0;
+        padding: 0 15px;
+        font-size: 0.9rem;
+        box-shadow: 1px 2px 4px 0 rgba(0,0,0,.03);
+        border: 1px solid rgba(0,0,0,.1);
+        
+        &::-webkit-input-placeholder {
+            color: $color-grey;
+        }
+    }
+    
+
+    .btn-submit-container {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 5px;
+
+        .btn {
+            height: 100%;
+            height: $navbar-height - 30px;
+            background-color: $color-main;
+            color: $color-white;
+            padding: 0 15px;
+        }
+    }
 }

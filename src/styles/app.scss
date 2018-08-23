@@ -1,7 +1,22 @@
-@import '../components/navbar/navbar';
-@import '../components/sidebar/sidebar';
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+.text-main {
+    color: $color-main;
+}
 
 .app-container {
     padding-top: $navbar-height;
     padding-left: $sidebar-width;
+    transition: all 0.3s ease;
 }
+
+.app-wrapper.collapsed {
+    .app-container {
+        padding-left: $sidebar-collapse-width;
+    }
+}
+
+@import '../components/navbar/navbar';
+@import '../components/sidebar/sidebar';
