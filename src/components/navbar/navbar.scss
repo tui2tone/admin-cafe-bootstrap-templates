@@ -6,9 +6,9 @@
     left: 0;
     top: 0;
     transition: all 0.5s ease;
-    background-color: $color-black;
+    background-color: $color-white;
     height: $navbar-height;
-    box-shadow: 1px 2px 4px 0 rgba(0,0,0,.1);
+    box-shadow: 1px 2px 4px 0 rgba(0,0,0,.05);
     transition: all 0.3s ease;
 
     .nav-item {
@@ -52,7 +52,7 @@
     .navbar-toggler {
         background-color: transparent;
         border: none;
-        color: $color-white;
+        color: $color-grey;
         margin-right: 15px;
         font-size: 1.2rem;
         display: block;
@@ -70,8 +70,9 @@
     width: 100%;
     position: relative;
     background-color: $color-white;
-    border-radius: 3px;
+    border-radius: 0;
     margin-bottom: 0;
+    min-width: 500px;
 
     .form-control {
         position: relative;
@@ -83,27 +84,11 @@
         margin-right: 0;
         padding: 0 15px;
         font-size: 0.9rem;
-        box-shadow: 1px 2px 4px 0 rgba(0,0,0,.03);
-        border: 1px solid rgba(0,0,0,.1);
+        border: 1px solid rgba(0,0,0,.08);
+        border-radius: $navbar-height;
         
         &::-webkit-input-placeholder {
             color: $color-grey;
-        }
-    }
-    
-
-    .btn-submit-container {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 5px;
-
-        .btn {
-            height: 100%;
-            height: $navbar-height - 30px;
-            background-color: $color-main;
-            color: $color-white;
-            padding: 0 15px;
         }
     }
 }

@@ -4,7 +4,9 @@ const path = require('path')
 const pages = {
     'index': 'Index',
     'landing': 'Landing',
-    'login': 'Login'
+    'components': 'Components',
+    'login': 'Login',
+    'form': 'Form'
 };
 
 const plugins = [

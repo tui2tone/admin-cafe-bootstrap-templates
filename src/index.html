@@ -4,170 +4,377 @@
     <title>Index</title>
 </head>
 
-<body class="app-wrapper">
+<body class="app-wrapper app-default">
     <%= require('html-loader!./components/navbar/navbar.html') %>
         <div class="app-main-wrapper">
             <%= require('html-loader!./components/sidebar/sidebar.html') %>
-            <main class="app-container">
-                <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-                    <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                        <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
-                    </div>
-                    <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                        <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Dashboard</h1>
-                    <div class="btn-toolbar mb-2 mb-md-0">
-                        <div class="btn-group mr-2">
-                            <button class="btn btn-sm btn-outline-secondary">Share</button>
-                            <button class="btn btn-sm btn-outline-secondary">Export</button>
+                <main class="app-container">
+                    <div class="app-header">
+                        <div class="container-fluid">
+                            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                                <h3 class="app-title">Dashboard</h3>
+                                <div class="btn-toolbar mb-2 mb-md-0">
+                                    <div class="btn-group mr-2">
+                                        <button class="btn btn-sm btn-outline-secondary">Share</button>
+                                        <button class="btn btn-sm btn-outline-secondary">Export</button>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                                        </svg>
+                                        This week
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="16" y1="2" x2="16" y2="6"></line>
-                                <line x1="8" y1="2" x2="8" y2="6"></line>
-                                <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg>
-                            This week
-                        </button>
                     </div>
-                </div>
+                    <div class="container-fluid">
+                        <div class="card card-banner card-chart card-green no-br">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <div class="title">Top Sale Today</div>
+                                </div>
+                                <ul class="card-action">
+                                    <li>
+                                        <a href="/">
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <div class="ct-chart-sale">
+                                    <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="250" class="ct-chart-line" style="width: 100%; height: 250;">
+                                        <g class="ct-grids">
+                                            <line x1="0" x2="0" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="75.73684210526316" x2="75.73684210526316" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="151.47368421052633" x2="151.47368421052633" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="227.21052631578948" x2="227.21052631578948" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="302.94736842105266" x2="302.94736842105266" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="378.68421052631584" x2="378.68421052631584" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="454.42105263157896" x2="454.42105263157896" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="530.1578947368422" x2="530.1578947368422" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="605.8947368421053" x2="605.8947368421053" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="681.6315789473684" x2="681.6315789473684" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="757.3684210526317" x2="757.3684210526317" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="833.1052631578948" x2="833.1052631578948" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="908.8421052631579" x2="908.8421052631579" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="984.5789473684212" x2="984.5789473684212" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="1060.3157894736844" x2="1060.3157894736844" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="1136.0526315789475" x2="1136.0526315789475" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="1211.7894736842106" x2="1211.7894736842106" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="1287.5263157894738" x2="1287.5263157894738" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="1363.2631578947369" x2="1363.2631578947369" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line x1="1439.0000000000002" x2="1439.0000000000002" y1="0" y2="220" class="ct-grid ct-horizontal"></line>
+                                            <line y1="220" y2="220" x1="0" x2="1439" class="ct-grid ct-vertical"></line>
+                                            <line y1="176" y2="176" x1="0" x2="1439" class="ct-grid ct-vertical"></line>
+                                            <line y1="132" y2="132" x1="0" x2="1439" class="ct-grid ct-vertical"></line>
+                                            <line y1="88" y2="88" x1="0" x2="1439" class="ct-grid ct-vertical"></line>
+                                            <line y1="44" y2="44" x1="0" x2="1439" class="ct-grid ct-vertical"></line>
+                                            <line y1="0" y2="0" x1="0" x2="1439" class="ct-grid ct-vertical"></line>
+                                        </g>
+                                        <g>
+                                            <g class="ct-series ct-series-a">
+                                                <path d="M0,220L0,215.23L75.737,215.054L151.474,212.59L227.211,205.902L302.947,186.282L378.684,157.826L454.421,77.727L530.158,80.12L605.895,64.133L681.632,100.66L757.368,95.327L833.105,122.741L908.842,103.46L984.579,201.492L1060.316,196.252L1136.053,198.88L1211.789,194.915L1287.526,161.029L1363.263,120.866L1439,80.985L1514.737,183.485L1590.474,142.27L1666.211,195.682L1666.211,220Z"
+                                                    class="ct-area"></path>
+                                                <path d="M0,215.23L75.737,215.054L151.474,212.59L227.211,205.902L302.947,186.282L378.684,157.826L454.421,77.727L530.158,80.12L605.895,64.133L681.632,100.66L757.368,95.327L833.105,122.741L908.842,103.46L984.579,201.492L1060.316,196.252L1136.053,198.88L1211.789,194.915L1287.526,161.029L1363.263,120.866L1439,80.985L1514.737,183.485L1590.474,142.27L1666.211,195.682"
+                                                    class="ct-line"></path>
+                                                <line x1="0" y1="215.2304" x2="0.01" y2="215.2304" class="ct-point" ct:value="2710"></line>
+                                                <text x="0" y="205.2304" style="text-anchor: left" class="ct-label">$2k</text>
+                                                <line x1="75.73684210526316" y1="215.0544" x2="75.74684210526317" y2="215.0544" class="ct-point" ct:value="2810"></line>
+                                                <text x="75.73684210526316" y="205.0544" style="text-anchor: left" class="ct-label">$2k</text>
+                                                <line x1="151.47368421052633" y1="212.5904" x2="151.48368421052632" y2="212.5904" class="ct-point" ct:value="4210"></line>
+                                                <text x="151.47368421052633" y="202.5904" style="text-anchor: left" class="ct-label">$4k</text>
+                                                <line x1="227.21052631578948" y1="205.9024" x2="227.22052631578947" y2="205.9024" class="ct-point" ct:value="8010"></line>
+                                                <text x="227.21052631578948" y="195.9024" style="text-anchor: left" class="ct-label">$8k</text>
+                                                <line x1="302.94736842105266" y1="186.28192" x2="302.95736842105265" y2="186.28192" class="ct-point" ct:value="19158"></line>
+                                                <text x="302.94736842105266" y="176.28192" style="text-anchor: left" class="ct-label">$19k</text>
+                                                <line x1="378.68421052631584" y1="157.82623999999998" x2="378.6942105263158" y2="157.82623999999998" class="ct-point" ct:value="35326"></line>
+                                                <text x="378.68421052631584" y="147.82623999999998" style="text-anchor: left" class="ct-label">$35k</text>
+                                                <line x1="454.42105263157896" y1="77.72688" x2="454.43105263157895" y2="77.72688" class="ct-point" ct:value="80837"></line>
+                                                <text x="454.42105263157896" y="67.72688" style="text-anchor: left" class="ct-label">$80k</text>
+                                                <line x1="530.1578947368422" y1="80.12047999999999" x2="530.1678947368422" y2="80.12047999999999" class="ct-point" ct:value="79477"></line>
+                                                <text x="530.1578947368422" y="70.12047999999999" style="text-anchor: left" class="ct-label">$79k</text>
+                                                <line x1="605.8947368421053" y1="64.13264000000001" x2="605.9047368421053" y2="64.13264000000001" class="ct-point" ct:value="88561"></line>
+                                                <text x="605.8947368421053" y="54.13264000000001" style="text-anchor: left" class="ct-label">$88k</text>
+                                                <line x1="681.6315789473684" y1="100.65968" x2="681.6415789473684" y2="100.65968" class="ct-point" ct:value="67807"></line>
+                                                <text x="681.6315789473684" y="90.65968" style="text-anchor: left" class="ct-label">$67k</text>
+                                                <line x1="757.3684210526317" y1="95.32688" x2="757.3784210526317" y2="95.32688" class="ct-point" ct:value="70837"></line>
+                                                <text x="757.3684210526317" y="85.32688" style="text-anchor: left" class="ct-label">$70k</text>
+                                                <line x1="833.1052631578948" y1="122.74064" x2="833.1152631578948" y2="122.74064" class="ct-point" ct:value="55261"></line>
+                                                <text x="833.1052631578948" y="112.74064" style="text-anchor: left" class="ct-label">$55k</text>
+                                                <line x1="908.8421052631579" y1="103.45984" x2="908.8521052631579" y2="103.45984" class="ct-point" ct:value="66216"></line>
+                                                <text x="908.8421052631579" y="93.45984" style="text-anchor: left" class="ct-label">$66k</text>
+                                                <line x1="984.5789473684212" y1="201.49184" x2="984.5889473684211" y2="201.49184" class="ct-point" ct:value="10516"></line>
+                                                <text x="984.5789473684212" y="191.49184" style="text-anchor: left" class="ct-label">$10k</text>
+                                                <line x1="1060.3157894736844" y1="196.25232" x2="1060.3257894736844" y2="196.25232" class="ct-point" ct:value="13493"></line>
+                                                <text x="1060.3157894736844" y="186.25232" style="text-anchor: left" class="ct-label">$13k</text>
+                                                <line x1="1136.0526315789475" y1="198.88" x2="1136.0626315789475" y2="198.88" class="ct-point" ct:value="12000"></line>
+                                                <text x="1136.0526315789475" y="188.88" style="text-anchor: left" class="ct-label">$12k</text>
+                                                <line x1="1211.7894736842106" y1="194.91472" x2="1211.7994736842106" y2="194.91472" class="ct-point" ct:value="14253"></line>
+                                                <text x="1211.7894736842106" y="184.91472" style="text-anchor: left" class="ct-label">$14k</text>
+                                                <line x1="1287.5263157894738" y1="161.02944" x2="1287.5363157894737" y2="161.02944" class="ct-point" ct:value="33506"></line>
+                                                <text x="1287.5263157894738" y="151.02944" style="text-anchor: left" class="ct-label">$33k</text>
+                                                <line x1="1363.2631578947369" y1="120.86624" x2="1363.2731578947369" y2="120.86624" class="ct-point" ct:value="56326"></line>
+                                                <text x="1363.2631578947369" y="110.86624" style="text-anchor: left" class="ct-label">$56k</text>
+                                                <line x1="1439.0000000000002" y1="80.98464000000001" x2="1439.0100000000002" y2="80.98464000000001" class="ct-point" ct:value="78986"></line>
+                                                <text x="1439.0000000000002" y="70.98464000000001" style="text-anchor: left" class="ct-label">$78k</text>
+                                                <line x1="1514.7368421052633" y1="183.48528" x2="1514.7468421052633" y2="183.48528" class="ct-point" ct:value="20747"></line>
+                                                <text x="1514.7368421052633" y="173.48528" style="text-anchor: left" class="ct-label">$20k</text>
+                                                <line x1="1590.4736842105265" y1="142.2696" x2="1590.4836842105265" y2="142.2696" class="ct-point" ct:value="44165"></line>
+                                                <text x="1590.4736842105265" y="132.2696" style="text-anchor: left" class="ct-label">$44k</text>
+                                                <line x1="1666.2105263157896" y1="195.68207999999998" x2="1666.2205263157896" y2="195.68207999999998" class="ct-point" ct:value="13817"></line>
+                                                <text x="1666.2105263157896" y="185.68207999999998" style="text-anchor: left" class="ct-label">$13k</text>
+                                            </g>
+                                        </g>
+                                        <g class="ct-labels">
+                                            <foreignObject style="overflow: visible;" x="0" y="225" width="75.73684210526316" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">10:20</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="75.73684210526316" y="225" width="75.73684210526316" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">10:30</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="151.47368421052633" y="225" width="75.73684210526315" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">10:40</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="227.21052631578948" y="225" width="75.73684210526318" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">10:50</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="302.94736842105266" y="225" width="75.73684210526318" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">11:00</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="378.68421052631584" y="225" width="75.73684210526312" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">11:10</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="454.42105263157896" y="225" width="75.73684210526324" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">11:20</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="530.1578947368422" y="225" width="75.73684210526312" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">11:30</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="605.8947368421053" y="225" width="75.73684210526312" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">11:40</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="681.6315789473684" y="225" width="75.73684210526324" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">11:50</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="757.3684210526317" y="225" width="75.73684210526312" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">12:00</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="833.1052631578948" y="225" width="75.73684210526312" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">12:10</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="908.8421052631579" y="225" width="75.73684210526324" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">12:20</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="984.5789473684212" y="225" width="75.73684210526324" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">12:30</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="1060.3157894736844" y="225" width="75.73684210526312" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">12:40</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="1136.0526315789475" y="225" width="75.73684210526312" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">12:50</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="1211.7894736842106" y="225" width="75.73684210526312" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">13:00</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="1287.5263157894738" y="225" width="75.73684210526312" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">13:10</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="1363.2631578947369" y="225" width="75.73684210526335" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 76px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">13:20</span>
+                                            </foreignObject>
+                                            <foreignObject style="overflow: visible;" x="1439.0000000000002" y="225" width="30" height="20">
+                                                <span class="ct-label ct-horizontal " style="width: 30px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">13:30</span>
+                                            </foreignObject>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <a class="card card-banner card-green-light">
+                                    <div class="card-body">
+                                        <i class="icon fa fa-shopping-basket fa-4x"></i>
+                                        <div class="content">
+                                            <div class="title">Sale Today</div>
+                                            <div class="value">
+                                                <span class="sign">$</span>420</div>
+                                        </div>
+                                    </div>
+                                </a>
 
-                <canvas class="my-4 w-100 chartjs-render-monitor" id="myChart" width="1551" height="654" style="display: block; width: 1551px; height: 654px;"></canvas>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <a class="card card-banner card-blue-light">
+                                    <div class="card-body">
+                                        <i class="icon fa fa-thumbs-o-up fa-4x"></i>
+                                        <div class="content">
+                                            <div class="title">Page Likes</div>
+                                            <div class="value">
+                                                <span class="sign"></span>2453</div>
+                                        </div>
+                                    </div>
+                                </a>
 
-                <h2>Section title</h2>
-                <div class="table-responsive">
-                    <table class="table table-striped table-sm">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Header</th>
-                                <th>Header</th>
-                                <th>Header</th>
-                                <th>Header</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1,001</td>
-                                <td>Lorem</td>
-                                <td>ipsum</td>
-                                <td>dolor</td>
-                                <td>sit</td>
-                            </tr>
-                            <tr>
-                                <td>1,002</td>
-                                <td>amet</td>
-                                <td>consectetur</td>
-                                <td>adipiscing</td>
-                                <td>elit</td>
-                            </tr>
-                            <tr>
-                                <td>1,003</td>
-                                <td>Integer</td>
-                                <td>nec</td>
-                                <td>odio</td>
-                                <td>Praesent</td>
-                            </tr>
-                            <tr>
-                                <td>1,003</td>
-                                <td>libero</td>
-                                <td>Sed</td>
-                                <td>cursus</td>
-                                <td>ante</td>
-                            </tr>
-                            <tr>
-                                <td>1,004</td>
-                                <td>dapibus</td>
-                                <td>diam</td>
-                                <td>Sed</td>
-                                <td>nisi</td>
-                            </tr>
-                            <tr>
-                                <td>1,005</td>
-                                <td>Nulla</td>
-                                <td>quis</td>
-                                <td>sem</td>
-                                <td>at</td>
-                            </tr>
-                            <tr>
-                                <td>1,006</td>
-                                <td>nibh</td>
-                                <td>elementum</td>
-                                <td>imperdiet</td>
-                                <td>Duis</td>
-                            </tr>
-                            <tr>
-                                <td>1,007</td>
-                                <td>sagittis</td>
-                                <td>ipsum</td>
-                                <td>Praesent</td>
-                                <td>mauris</td>
-                            </tr>
-                            <tr>
-                                <td>1,008</td>
-                                <td>Fusce</td>
-                                <td>nec</td>
-                                <td>tellus</td>
-                                <td>sed</td>
-                            </tr>
-                            <tr>
-                                <td>1,009</td>
-                                <td>augue</td>
-                                <td>semper</td>
-                                <td>porta</td>
-                                <td>Mauris</td>
-                            </tr>
-                            <tr>
-                                <td>1,010</td>
-                                <td>massa</td>
-                                <td>Vestibulum</td>
-                                <td>lacinia</td>
-                                <td>arcu</td>
-                            </tr>
-                            <tr>
-                                <td>1,011</td>
-                                <td>eget</td>
-                                <td>nulla</td>
-                                <td>Class</td>
-                                <td>aptent</td>
-                            </tr>
-                            <tr>
-                                <td>1,012</td>
-                                <td>taciti</td>
-                                <td>sociosqu</td>
-                                <td>ad</td>
-                                <td>litora</td>
-                            </tr>
-                            <tr>
-                                <td>1,013</td>
-                                <td>torquent</td>
-                                <td>per</td>
-                                <td>conubia</td>
-                                <td>nostra</td>
-                            </tr>
-                            <tr>
-                                <td>1,014</td>
-                                <td>per</td>
-                                <td>inceptos</td>
-                                <td>himenaeos</td>
-                                <td>Curabitur</td>
-                            </tr>
-                            <tr>
-                                <td>1,015</td>
-                                <td>sodales</td>
-                                <td>ligula</td>
-                                <td>in</td>
-                                <td>libero</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </main>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <a class="card card-banner card-yellow-light">
+                                    <div class="card-body">
+                                        <i class="icon fa fa-user-plus fa-4x"></i>
+                                        <div class="content">
+                                            <div class="title">New Registration</div>
+                                            <div class="value">
+                                                <span class="sign"></span>50</div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                Title
+                            </div>
+                            <div class="card-body">
+
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Header</th>
+                                                <th>Header</th>
+                                                <th>Header</th>
+                                                <th>Header</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1,001</td>
+                                                <td>Lorem</td>
+                                                <td>ipsum</td>
+                                                <td>dolor</td>
+                                                <td>sit</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,002</td>
+                                                <td>amet</td>
+                                                <td>consectetur</td>
+                                                <td>adipiscing</td>
+                                                <td>elit</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,003</td>
+                                                <td>Integer</td>
+                                                <td>nec</td>
+                                                <td>odio</td>
+                                                <td>Praesent</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,003</td>
+                                                <td>libero</td>
+                                                <td>Sed</td>
+                                                <td>cursus</td>
+                                                <td>ante</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,004</td>
+                                                <td>dapibus</td>
+                                                <td>diam</td>
+                                                <td>Sed</td>
+                                                <td>nisi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,005</td>
+                                                <td>Nulla</td>
+                                                <td>quis</td>
+                                                <td>sem</td>
+                                                <td>at</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,006</td>
+                                                <td>nibh</td>
+                                                <td>elementum</td>
+                                                <td>imperdiet</td>
+                                                <td>Duis</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,007</td>
+                                                <td>sagittis</td>
+                                                <td>ipsum</td>
+                                                <td>Praesent</td>
+                                                <td>mauris</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,008</td>
+                                                <td>Fusce</td>
+                                                <td>nec</td>
+                                                <td>tellus</td>
+                                                <td>sed</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,009</td>
+                                                <td>augue</td>
+                                                <td>semper</td>
+                                                <td>porta</td>
+                                                <td>Mauris</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,010</td>
+                                                <td>massa</td>
+                                                <td>Vestibulum</td>
+                                                <td>lacinia</td>
+                                                <td>arcu</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,011</td>
+                                                <td>eget</td>
+                                                <td>nulla</td>
+                                                <td>Class</td>
+                                                <td>aptent</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,012</td>
+                                                <td>taciti</td>
+                                                <td>sociosqu</td>
+                                                <td>ad</td>
+                                                <td>litora</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,013</td>
+                                                <td>torquent</td>
+                                                <td>per</td>
+                                                <td>conubia</td>
+                                                <td>nostra</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,014</td>
+                                                <td>per</td>
+                                                <td>inceptos</td>
+                                                <td>himenaeos</td>
+                                                <td>Curabitur</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1,015</td>
+                                                <td>sodales</td>
+                                                <td>ligula</td>
+                                                <td>in</td>
+                                                <td>libero</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
         </div>
 </body>
 

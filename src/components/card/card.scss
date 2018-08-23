@@ -1,0 +1,12 @@
+.card {
+    border: 1px solid rgba(0,0,0,.1);
+    margin-bottom: 15px;
+    box-shadow: 1px 2px 4px 0 rgba(0,0,0,.05);
+    overflow: hidden;
+
+    .card-header {
+        border-bottom: 0;
+        color: $color-black-light;
+        box-shadow: 1px 1px 1px 0 rgba(0,0,0,.1);
+    }
+}
