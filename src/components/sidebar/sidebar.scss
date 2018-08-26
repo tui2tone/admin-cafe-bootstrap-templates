@@ -221,6 +221,13 @@
             }
         }
 
+        .sidebar-heading {
+            width: $sidebar-collapse-width;
+            height: 1px;
+            overflow: hidden;
+            border-bottom: 1px solid $color-bg-sidebar-logo;
+        }
+
         &:hover {
             width: $sidebar-width;
 
@@ -230,6 +237,13 @@
                         display: block;
                     }
                 }
+            }
+
+            .sidebar-heading {
+                width: $sidebar-width;
+                height: auto;
+                overflow: auto;
+                border-bottom: none;
             }
         }
     }
