@@ -1,8 +1,80 @@
-$color-main: #68BD12;
-$color-black-light: #354655;
+
+$color-black-light: #2D3A3A;
 $color-black: #333;
 $color-black-dark: #1D1E22;
-$color-grey: #f5f6f7;
+$color-grey: #EBF2FA;
 $color-white: #FFF;
 $color-light-grey: #FDFFFC;
-$color-yellow: #FFC215;
+$color-yellow: #2BA84A;
+
+$color-grey-lightest: #FAFAFA;
+$color-grey-lighter: #EEEEEE;
+$color-grey-light: #BDBDBD;
+$color-grey: #757575;
+$color-grey-dark: #05668D;
+$color-grey-darker: #021C27;
+$color-grey-darkest: #021C27;
+
+$color-yellow-lightest: #FAFAFA;
+$color-yellow-lighter: #FFF9C4;
+$color-yellow-light: #FFF176;
+$color-yellow: #FF9F1C;
+$color-yellow-dark: #FF8F00;
+$color-yellow-darker: #2F1D06;
+$color-yellow-darkest: #180F03;
+
+$color-blue-lightest: #F2F6FB;
+$color-blue-lighter: #EBF2FA;
+$color-blue-light: #01BAEF;
+$color-blue: #01BAEF;
+$color-blue-dark: #05668D;
+$color-blue-darker: #0A4349;
+$color-blue-darkest: #021C27;
+
+$color-green-lightest: #F2F6FB;
+$color-green-lighter: #AED581;
+$color-green-light: #8BC34A;
+$color-green-light-s1: #7CB342;
+$color-green: #388E3C;
+$color-green-dark: #2E7D32;
+$color-green-darker: #1B5E20;
+$color-green-darkest: #021C27;
+
+$color-black-lightest: #F2F6FB;
+$color-black-lighter: #EBF2FA;
+$color-black-light: #5F9DB6;
+$color-black: #464645;
+$color-black-dark: #333;
+$color-black-darker: #212121;
+$color-black-darkest: #021C27;
+
+$color-sidebar-dark: #2C2F30;
+$color-sidebar-darker: #26292A;
+
+// Yellow
+$color-bg: $color-grey-lightest;
+$color-bg-sidebar: $color-sidebar-dark;
+$color-bg-sidebar-logo: $color-sidebar-darker;
+$color-highlight: $color-yellow;
+$color-highlight-contrast: $color-white;
+$color-font: $color-black;
+$color-font-light: $color-grey-light;
+$color-border-light: $color-grey-lighter;
+
+// // Green
+// $color-bg: $color-grey-lightest;
+// $color-bg-sidebar: $color-green-darkest;
+// $color-highlight: $color-green-light;
+// $color-highlight-contrast: $color-white;
+// $color-font: $color-black;
+// $color-font-light: $color-grey-light;
+// $color-border-light: $color-grey-lighter;
+
+// Blue
+// $color-bg: $color-grey-lightest;
+// $color-bg-sidebar: $color-blue-darkest;
+// $color-highlight: $color-blue;
+// $color-highlight-contrast: $color-white;
+// $color-font: $color-black;
+// $color-font-light: $color-grey-light;
+// $color-border-light: $color-grey-lighter;

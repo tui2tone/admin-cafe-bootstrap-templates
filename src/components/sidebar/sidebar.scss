@@ -5,8 +5,8 @@
     left: 0;
     z-index: 1040;
     padding: 0;
-    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, .2);
-    background-color: $color-black-light;
+    // box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, .1);
+    background-color: $color-bg-sidebar;
     width: $sidebar-width;
     transition: all 0.3s ease;
     overflow-x: hidden;
@@ -14,9 +14,12 @@
 
     .sidebar-header {
         height: $navbar-height;
+        background-color: $color-bg-sidebar-logo;
         display: flex;
         align-items: center;
         justify-content: center;
+        border: 1px solid $color-bg-sidebar;
+        box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, .1);
 
         .sidebar-brand {
             color: $color-white;
@@ -41,13 +44,16 @@
         justify-content: center;
         flex-direction: column;
         padding: 15px;
+        overflow: hidden;
+        transition: 0.3s all ease;
+        height: 200px;
 
         &::after {
             display: none;
         }
 
         &:hover, &:active, &:focus {
-            color: $color-main;
+            color: $color-highlight;
         }
 
         .profile-img {
@@ -88,48 +94,74 @@
         .nav {
             .nav-item {
                 .nav-link {
-                    color: rgba($color-white, 0.6);
+                    color: rgba($color-white, 0.7);
                     font-weight: 400;
                     display: flex;
                     align-items: center;
-                    padding: 8px 15px;
+                    padding: 0;
+                    position: relative;
+                    
+                    &::after {
+                        content: '';
+                        z-index: 100;
+                        position: absolute;
+                        left: 0;
+                        height: 100%;
+                        width: 0;
+                        background-color: $color-highlight;
+                        transition: all 0.3s ease;
+                    }
 
                     i {
-                        width: 36px;
-                        text-align: center;
+                        width: $sidebar-collapse-width;
+                        height: $sidebar-collapse-width / 1.4;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.3rem;
+                        z-index: 102;
+                        position: relative;
+                    }
+
+                    span {
+                        position: relative;
+                        z-index: 102;
                     }
 
                     &.active {
-                        color: $color-yellow;
+                        color: $color-highlight;
+                        background-color: $color-bg;
+                        &::after {
+                            width: 4px;
+                        }
                     }
 
                     &:hover {
-                        color: $color-white;
+                        &::after {
+                            width: 100%;
+                        }
+                        span, i {
+                            color: $color-highlight-contrast;
+                        }
                     }
                 }
             }
         }
     }
-    .nav-link {
-        font-weight: 500;
-        color: #333;
-        .feather {
-            margin-right: 4px;
-            color: #999;
-        }
-        &.active {
-            color: #007bff;
-        }
-    }
-
     .btn-main-action {
-        background-color: $color-yellow;
+        background-color: $color-highlight;
         box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, .2);
+        border-bottom: 3px solid $color-green-light-s1;
+        color: $color-highlight-contrast;
     }
 }
 
 .app-wrapper.collapsed {
     .sidebar {
         width: $sidebar-collapse-width;
+        .sidebar-profile {
+            height: 0;
+            padding: 0;
+        }
     }
 }

@@ -1,0 +1,10 @@
+input.form-control {
+    border-radius: 2px;
+    border: 1px solid $color-border-light;
+    height: $form-height;
+
+    &::-webkit-input-placeholder {
+        color: $color-font-light;
+        font-size: 0.9rem;
+    }
+}

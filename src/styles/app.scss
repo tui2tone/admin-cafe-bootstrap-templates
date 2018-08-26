@@ -1,13 +1,9 @@
 * {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: $color-grey;
-}
-
-.text-main {
-    color: $color-main;
+    background-color: $color-bg;
 }
 
 .app-container {
@@ -26,3 +22,4 @@ body {
 @import '../components/navbar/navbar';
 @import '../components/sidebar/sidebar';
 @import '../components/header/header';
+@import '../components/form/input';
