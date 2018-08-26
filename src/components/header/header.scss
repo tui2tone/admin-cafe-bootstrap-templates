@@ -1,6 +1,46 @@
 .app-header {
+    box-shadow: 1px 2px 4px 0 rgba(0,0,0,.05);
+    background-color: $color-white;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: $color-font;
+
     .app-title {
-        font-weight: 300;
-        color: $color-black-light;
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+
+    .app-breadcrumb {
+        margin-top: -0.2rem;
+        .breadcrumb {
+            margin-bottom: 0;
+            padding: 0;
+            background-color: transparent;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+
+            .breadcrumb-arrow {
+                color: $color-font-lighter;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+
+            .breadcrumb-item {
+                color: $color-font-light;
+            }
+
+            a {
+                color: $color-font-light;
+
+                &:hover {
+                    color: $color-font;
+                    text-decoration: none;
+                }
+            }
+        }
     }
 }

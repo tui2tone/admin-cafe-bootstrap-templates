@@ -6,6 +6,12 @@ body {
     background-color: $color-bg;
 }
 
+
+.container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .app-container {
     padding-top: $navbar-height;
     padding-left: $sidebar-width;
@@ -23,3 +29,5 @@ body {
 @import '../components/sidebar/sidebar';
 @import '../components/header/header';
 @import '../components/form/input';
+@import '../components/button/button';
+@import '../components/alert/alert';

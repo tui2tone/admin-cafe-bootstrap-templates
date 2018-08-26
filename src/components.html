@@ -4,16 +4,25 @@
     <title>Index</title>
 </head>
 
-<body class="app-wrapper app-default">
+<body class="app-wrapper collapsed">
     <%= require('html-loader!./components/navbar/navbar.html') %>
         <div class="app-main-wrapper">
             <%= require('html-loader!./components/sidebar/sidebar.html') %>
                 <main class="app-container">
                     <div class="app-header">
-                        <div class="container-fluid">
-                            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2">
-                                <h3 class="app-title">Components</h3>
-                            </div>
+                        <h3 class="app-title">Components</h3>
+                        <div class="app-breadcrumb">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="/">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-arrow">
+                                        <i class="arrow fas fa-angle-right"></i>
+                                    </li>
+                                    <li class="breadcrumb-item active">Components</li>
+                                </ol>
+                            </nav>
                         </div>
                     </div>
                     <div class="container-fluid">
@@ -114,7 +123,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
-                                                <div class="alert alert-danger  alert-dismissible" role="alert">
+                                                <div class="alert alert-danger alert-dismissible" role="alert">
                                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                                         <span aria-hidden="true">×</span>
                                                     </button>
@@ -122,7 +131,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
-                                                <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                                                <div class="alert alert-danger alert-dismissible" role="alert">
                                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                                         <span aria-hidden="true">×</span>
                                                     </button>
@@ -338,8 +347,7 @@
                                                             nibh ultricies vehicula ut id elit.</p>
                                                         <div>
                                                             <a href="#" class="btn btn-success btn-xs" role="button">Button</a>
-                                                            <a href="#" class="btn btn-light btn-default btn-xs"
-                                                                role="button">Button</a>
+                                                            <a href="#" class="btn btn-light btn-default btn-xs" role="button">Button</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -536,7 +544,7 @@
                                                             in iis qui facit eorum claritatem. Investigationes demonstraverunt
                                                             lectores legere me lius quod ii legunt saepius. Claritas est
                                                             etiam processus dynamicus, qui sequitur mutationem consuetudium
-                                                            </div>
+                                                        </div>
                                                         <div role="tabpanel" class="tab-pane" id="settings">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                                                             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
                                                             erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
@@ -693,7 +701,8 @@
                                                                     sed diam nonummy nibh euismod tincidunt ut laoreet dolore
                                                                     magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
                                                                     quis nostrud exerci tation ullamcorper suscipit lobortis
-                                                                    nisl</p>
+                                                                    nisl
+                                                                </p>
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>

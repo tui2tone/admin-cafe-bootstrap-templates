@@ -8,30 +8,57 @@ $color-light-grey: #FDFFFC;
 $color-yellow: #2BA84A;
 
 $color-grey-lightest: #FAFAFA;
-$color-grey-lighter: #EEEEEE;
+$color-grey-lighter: #F3F3F3;
+$color-grey-lighter-s1: #EAEAEA;
 $color-grey-light: #BDBDBD;
 $color-grey: #757575;
 $color-grey-dark: #05668D;
 $color-grey-darker: #021C27;
 $color-grey-darkest: #021C27;
 
-$color-yellow-lightest: #FAFAFA;
-$color-yellow-lighter: #FFF9C4;
-$color-yellow-light: #FFF176;
+$color-yellow-lightest: #FFE4C1;
+$color-yellow-lighter: #FCE3B1;
+$color-yellow-lighter-s1: #FBDC9E;
+$color-yellow-light: #FFB959;
 $color-yellow: #FF9F1C;
-$color-yellow-dark: #FF8F00;
-$color-yellow-darker: #2F1D06;
-$color-yellow-darkest: #180F03;
+$color-yellow-s1: #FF9408;
+$color-yellow-dark: #A36612;
+$color-yellow-darker: #74490D;
+$color-yellow-darkest: #2F1D06;
+
+$color-red-lightest: #FEC3C3;
+$color-red-lightest-s1: #FEAFAF;
+$color-red-lighter: #FE9B9B;
+$color-red-light: #FD7374;
+$color-red: #FD2425;
+$color-red-s1: #EF0206;
+$color-red-dark: #C30100;
+$color-red-darker: #7D0100;
+$color-red-darkest: #240100;
 
 $color-blue-lightest: #F2F6FB;
-$color-blue-lighter: #EBF2FA;
-$color-blue-light: #01BAEF;
+$color-blue-lighter: #A2E5F9;
+$color-blue-lighter-s1: #8BDFF7;
+$color-blue-light: #5DD3F4;
 $color-blue: #01BAEF;
+$color-blue-s1: #01ABDA;
 $color-blue-dark: #05668D;
 $color-blue-darker: #0A4349;
 $color-blue-darkest: #021C27;
 
-$color-green-lightest: #F2F6FB;
+$color-purple-lightest: #F2F6FB;
+$color-purple-lighter: #A2E5F9;
+$color-purple-lighter-s1: #8BDFF7;
+$color-purple-light: #5DD3F4;
+$color-purple-light-s1: #5DD3F4;
+$color-purple: #007bff;
+$color-purple-s1: #0072EC;
+$color-purple-dark: #05668D;
+$color-purple-darker: #0A4349;
+$color-purple-darkest: #021C27;
+
+$color-green-lightest: #C2EDD0;
+$color-green-lightest-s1: #ADE7C1;
 $color-green-lighter: #AED581;
 $color-green-light: #8BC34A;
 $color-green-light-s1: #7CB342;
@@ -59,6 +86,7 @@ $color-highlight: $color-yellow;
 $color-highlight-contrast: $color-white;
 $color-font: $color-black;
 $color-font-light: $color-grey-light;
+$color-font-lighter: $color-grey-lighter;
 $color-border-light: $color-grey-lighter;
 
 // // Green
