@@ -92,8 +92,8 @@
         width: $sidebar-width;
 
         .nav {
-            .nav-item {
-                .nav-link {
+            & > .nav-item {
+                & > .nav-link {
                     color: rgba($color-white, 0.7);
                     font-weight: 400;
                     display: flex;
@@ -112,7 +112,7 @@
                         transition: all 0.3s ease;
                     }
 
-                    i {
+                    .icon {
                         width: $sidebar-collapse-width;
                         height: $sidebar-collapse-width / 1.4;
                         display: flex;
@@ -140,9 +140,58 @@
                         &::after {
                             width: 100%;
                         }
-                        span, i {
+                        span, .icon {
                             color: $color-highlight-contrast;
                         }
+                    }
+                }
+            }
+        }
+
+        .nav-link {
+            .arrow {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: $sidebar-collapse-width / 1.4;
+                padding: 0 1rem;
+                display: flex;
+                align-items: center;
+                transform: rotate(180deg);
+                transition: all 0.3s ease;
+                z-index: 150;
+            }
+
+            &.collapsed {
+                .arrow {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+
+        .nav-dropdown {
+            .nav-menu {
+                background-color: $color-bg-sidebar-logo;
+                .nav-item {
+                    .nav-link {
+                        padding-left: $sidebar-collapse-width;
+                        color: rgba($color-white, 0.7);
+                        font-size: 0.9rem;
+
+                        &:hover {
+                            color: $color-highlight-contrast;
+                        }
+                        &.active {
+                            color: $color-highlight;
+                        }
+                    }
+
+                    &:first-child {
+                        padding-top: 0.5rem;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0.5rem;
                     }
                 }
             }
@@ -154,6 +203,7 @@
         border-bottom: 3px solid $color-green-light-s1;
         color: $color-highlight-contrast;
     }
+    
 }
 
 .app-wrapper.collapsed {

@@ -17,52 +17,92 @@
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fas fa-th-large"></i>
+                    <i class="icon fas fa-th-large"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="/components.html">
-                    <i class="fas fa-clone"></i>
+                    <i class="icon fas fa-clone"></i>
                     <span>Widgets</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">
-                    <i class="fas fa-th-list"></i>
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link" data-toggle="collapse" href="#navMenu1" role="button" aria-expanded="false" aria-controls="navMenu1">
+                    <i class="icon fas fa-th-list"></i>
                     <span>Elements</span>
                 </a>
-            </li>
+                <div class="nav-menu collapse show"  id="navMenu1">
+                    <div class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <span>Action</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span>Action</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span>Action</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span>Action</span>
+                        </a>
+                    </div>
+                </div>
+             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/form.html">
-                    <i class="fas fa-list-alt"></i>
+                    <i class="icon fas fa-list-alt"></i>
                     <span>Forms</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fas fa-address-card"></i>
+                    <i class="icon fas fa-address-card"></i>
                     <span>Data</span>
                 </a>
             </li>
             <h6 class="sidebar-heading d-flex justify-content-between align-items-center mt-4 text-muted">
                 <span>Pages</span>
             </h6>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-file-alt"></i>
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#navMenu1" role="button" aria-expanded="false" aria-controls="navMenu1">
+                    <i class="icon fas fa-th-list"></i>
                     <span>Pages</span>
+                    <i class="arrow fas fa-angle-down"></i>
                 </a>
-            </li>
+                <div class="nav-menu collapse"  id="navMenu1">
+                    <div class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span>Landing</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span>Login</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span>404 Not Found</span>
+                        </a>
+                    </div>
+                </div>
+             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fas fa-tablet-alt"></i>
+                    <i class="icon fas fa-tablet-alt"></i>
                     <span>App</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fas fa-book"></i>
+                    <i class="icon fas fa-book"></i>
                     <span>Documentation</span>
                 </a>
             </li>
