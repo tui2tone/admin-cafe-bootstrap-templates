@@ -1,44 +1,111 @@
 .app-header {
     box-shadow: 1px 2px 4px 0 rgba(0,0,0,.05);
-    background-color: $color-white;
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
+    background-color: $color-highlight;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     margin-bottom: 1.5rem;
     color: $color-font;
+    border-bottom: 1px solid #ebf1f6;
+    box-shadow: 0 2px 5px 0 rgba(116,120,123,.2);
+    height: $navbar-height;
+    display: flex;
+    position: relative;
+    align-items: center;
 
     .app-title {
         font-weight: 400;
         font-size: 1.6rem;
+        color: $color-highlight-font;
+        margin-bottom: 0;
     }
 
-    .app-breadcrumb {
-        margin-top: -0.2rem;
-        .breadcrumb {
+    .app-header-left {
+        flex: 1;
+        position: relative;
+        z-index: 1001;
+    }
+    .app-header-right {
+        position: relative;
+        z-index: 1001;
+        height: 100%;
+    }
+
+    .app-header-center {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: auto;
+        height: 100%;
+        z-index: 1020;
+        display: flex;
+        align-items: center;
+        transform: translate(-50%, 0);
+
+        .app-header-search {
+            max-width: 600px;
+            min-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+
+            $search-input-height: $navbar-height - 30px;
+
+            .input-search-container {
+                position: relative;
+                background-color: $color-highlight-font;
+
+                &:only-child {
+                    border-radius: $search-input-height;
+                }
+                .form-control {
+                    height: $search-input-height;
+                    border-radius: $search-input-height;
+                    padding: 0 $search-input-height / 2;
+                    width: 100%;
+                    background-color: transparent;
+                    z-index: 1050;
+                    position: relative;
+                }
+
+                .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    padding: 0 $search-input-height / 2;
+                    height: 100%;
+                    color: rgba(#000, 0.2);
+                    font-size: 1.2rem;
+                    display: flex;
+                    align-items: center;
+                    z-index: 1002;
+                }
+            }
+        }
+    }
+
+    .app-header-action {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(0, 50%);
+        .btn {
             margin-bottom: 0;
-            padding: 0;
-            background-color: transparent;
-            font-size: 0.8rem;
             display: flex;
             align-items: center;
+            justify-content: center;
 
-            .breadcrumb-arrow {
-                color: $color-font-lighter;
-                padding-left: 0.5rem;
-                padding-right: 0.5rem;
-            }
-
-            .breadcrumb-item {
-                color: $color-font-light;
-            }
-
-            a {
-                color: $color-font-light;
+            &.btn-main-action {
+                height: $navbar-height - 10px;
+                width: $navbar-height - 10px;
+                border-radius: 50%;
+                font-size: 1.6rem;
+                background-color: $color-main;
+                color: $color-main-font;
+                box-shadow: 0 5px 10px 0 rgba(116,120,123,.5);
+                transition: all 0.3s ease;
+                transform: scale(1,1);
 
                 &:hover {
-                    color: $color-font;
-                    text-decoration: none;
+                    transform: scale(1.1,1.1);
                 }
             }
         }

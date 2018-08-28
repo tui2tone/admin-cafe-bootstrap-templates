@@ -5,12 +5,12 @@
     left: 0;
     z-index: 1040;
     padding: 0;
-    // box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, .1);
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, .1);
     background-color: $color-bg-sidebar;
     width: $sidebar-width;
     transition: all 0.3s ease;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
 
     .sidebar-header {
         height: $navbar-height;
@@ -19,7 +19,7 @@
         align-items: center;
         justify-content: center;
         border: 1px solid $color-bg-sidebar;
-        box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, .1);
+        // box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, .1);
 
         .sidebar-brand {
             color: $color-white;
@@ -88,29 +88,19 @@
         }
     }
     .sidebar-body {
-        padding: 0;
+        padding: 1rem 0;
         width: $sidebar-width;
 
         .nav {
             & > .nav-item {
                 & > .nav-link {
-                    color: rgba($color-white, 0.7);
+                    color: rgba($color-sidebar-font, 0.7);
                     font-weight: 400;
                     display: flex;
                     align-items: center;
                     padding: 0;
                     position: relative;
-                    
-                    &::after {
-                        content: '';
-                        z-index: 100;
-                        position: absolute;
-                        left: 0;
-                        height: 100%;
-                        width: 0;
-                        background-color: $color-highlight;
-                        transition: all 0.3s ease;
-                    }
+            
 
                     .icon {
                         width: $sidebar-collapse-width;
@@ -121,27 +111,58 @@
                         font-size: 1.3rem;
                         z-index: 102;
                         position: relative;
+                        color: rgba($color-sidebar-font, 0.7);
+
+                        &::before {
+                            z-index: 102;
+                            position: relative;
+                        }
+
+                        &::after {
+                            content: '';
+                            z-index: 100;
+                            position: absolute;
+                            left: 50%;
+                            height: $sidebar-collapse-width / 1.6;
+                            width:  $sidebar-collapse-width / 1.6;
+                            border-radius: 50%;
+                            background-color: $color-highlight;
+                            transition: all 0.3s ease;
+                            transform: translate(-50%, 0) scale(0,0);
+                        }
                     }
 
                     span {
                         position: relative;
                         z-index: 102;
+                        color: rgba($color-sidebar-font, 0.7);
                     }
 
                     &.active {
-                        color: $color-highlight;
                         background-color: $color-bg-sidebar-logo;
-                        &::after {
-                            width: 4px;
+                        
+                        span {
+                            color: $color-highlight;
+                        }
+
+                        .icon {
+                            color: $color-highlight-font;
+                            &::after {
+                                color: $color-highlight;
+                                transform: translate(-50%, 0) scale(1,1);
+                            }
                         }
                     }
 
                     &:hover {
-                        &::after {
-                            width: 100%;
+                        span {
+                            color: $color-sidebar-font;
                         }
-                        span, .icon {
-                            color: $color-highlight-contrast;
+                        .icon {
+                            color: $color-highlight-font;
+                            &::after {
+                                transform: translate(-50%, 0) scale(1,1);
+                            }
                         }
                     }
                 }
@@ -228,23 +249,23 @@
             border-bottom: 1px solid $color-bg-sidebar-logo;
         }
 
-        &:hover {
-            width: $sidebar-width;
+        // &:hover {
+        //     width: $sidebar-width;
 
-            .sidebar-body {
-                .nav-menu {
-                    &.collapse.show {
-                        display: block;
-                    }
-                }
-            }
+        //     .sidebar-body {
+        //         .nav-menu {
+        //             &.collapse.show {
+        //                 display: block;
+        //             }
+        //         }
+        //     }
 
-            .sidebar-heading {
-                width: $sidebar-width;
-                height: auto;
-                overflow: auto;
-                border-bottom: none;
-            }
-        }
+        //     .sidebar-heading {
+        //         width: $sidebar-width;
+        //         height: auto;
+        //         overflow: auto;
+        //         border-bottom: none;
+        //     }
+        // }
     }
 }

@@ -6,13 +6,14 @@
     left: 0;
     top: 0;
     transition: all 0.5s ease;
-    background-color: $color-white;
+    background-color: $color-highlight;
     height: $navbar-height;
     box-shadow: none;
     transition: all 0.3s ease;
 
     &.sps--blw {
-        box-shadow: 1px 2px 4px 0 rgba(0,0,0,.05);
+        border-bottom: 1px solid #ebf1f6;
+        box-shadow: 0 2px 5px 0 rgba(116,120,123,.2);
     }
 
     .nav-item {
@@ -73,7 +74,6 @@
 .navbar-search-container {
     width: 100%;
     position: relative;
-    background-color: $color-white;
     border-radius: 0;
     margin-bottom: 0;
     min-width: 500px;
@@ -88,8 +88,9 @@
         margin-right: 0;
         padding: 0 15px;
         font-size: 0.9rem;
-        border: 1px solid rgba(0,0,0,.08);
+        // box-shadow: 0px 1px 4px rgba(0,0,0,.1);
         border-radius: $navbar-height;
+        background-color: $color-white;
         
         &::-webkit-input-placeholder {
             color: $color-grey;

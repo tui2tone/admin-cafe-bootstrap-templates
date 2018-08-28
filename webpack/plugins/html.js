@@ -3,6 +3,7 @@ const path = require('path')
 
 const pages = {
     'index': 'Index',
+    'index-v2': 'Dashboard V2',
     'landing': 'Landing',
     'components': 'Components',
     'login': 'Login',

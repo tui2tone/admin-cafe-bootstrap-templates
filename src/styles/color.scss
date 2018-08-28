@@ -20,7 +20,7 @@ $color-yellow-lightest: #FFE4C1;
 $color-yellow-lighter: #FCE3B1;
 $color-yellow-lighter-s1: #FBDC9E;
 $color-yellow-light: #FFB959;
-$color-yellow: #FF9F1C;
+$color-yellow: #ffb300;
 $color-yellow-s1: #FF9408;
 $color-yellow-dark: #A36612;
 $color-yellow-darker: #74490D;
@@ -51,7 +51,7 @@ $color-purple-lighter: #A2E5F9;
 $color-purple-lighter-s1: #8BDFF7;
 $color-purple-light: #5DD3F4;
 $color-purple-light-s1: #5DD3F4;
-$color-purple: #007bff;
+$color-purple: #0d67b3;
 $color-purple-s1: #0072EC;
 $color-purple-dark: #05668D;
 $color-purple-darker: #0A4349;
@@ -78,16 +78,34 @@ $color-black-darkest: #021C27;
 $color-sidebar-dark: #2C2F30;
 $color-sidebar-darker: #26292A;
 
-// Yellow
+// White Sidebar
 $color-bg: $color-grey-lightest;
-$color-bg-sidebar: $color-sidebar-dark;
-$color-bg-sidebar-logo: $color-sidebar-darker;
-$color-highlight: $color-yellow;
-$color-highlight-contrast: $color-white;
+$color-bg-sidebar: $color-white;
+$color-bg-sidebar-logo: $color-white;
+$color-highlight-font: $color-white;
+$color-highlight: $color-purple;
+$color-highlight-contrast: $color-black;
+
+$color-main-font: $color-white;
+$color-main: $color-green-light;
+$color-main-contrast: $color-black;
+
+$color-sidebar-font: $color-black;
 $color-font: $color-black;
 $color-font-light: $color-grey-light;
 $color-font-lighter: $color-grey-lighter;
 $color-border-light: $color-grey-lighter;
+
+// Yellow
+// $color-bg: $color-grey-lightest;
+// $color-bg-sidebar: $color-sidebar-dark;
+// $color-bg-sidebar-logo: $color-sidebar-darker;
+// $color-highlight: $color-yellow;
+// $color-highlight-contrast: $color-white;
+// $color-font: $color-black;
+// $color-font-light: $color-grey-light;
+// $color-font-lighter: $color-grey-lighter;
+// $color-border-light: $color-grey-lighter;
 
 // // Green
 // $color-bg: $color-grey-lightest;

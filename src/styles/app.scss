@@ -1,5 +1,5 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', 'Prompt', sans-serif;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 }
 
 .app-container {
-    padding-top: $navbar-height;
+    // padding-top: $navbar-height;
     padding-left: $sidebar-width;
     transition: all 0.3s ease;
 }
@@ -21,6 +21,12 @@ body {
 .app-wrapper.collapsed {
     .app-container {
         padding-left: $sidebar-collapse-width;
+    }
+}
+
+.app-wrapper.app-top-menu {
+    .app-container {
+        padding-left: 0;
     }
 }
 
