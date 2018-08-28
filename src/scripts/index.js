@@ -6,39 +6,95 @@ $(document).ready(function() {
     $(".navbar-toggler").click(function() {
         $("body").toggleClass("collapsed");
     });
+    
+    const ShadowLineElement = Chart.elements.Line.extend({
+        draw () {
+          const { ctx } = this._chart
+      
+          const originalStroke = ctx.stroke
+      
+          ctx.stroke = function () {
+            ctx.save()
+            ctx.shadowColor = '#8BC34A66'
+            ctx.shadowBlur = 50
+            ctx.shadowOffsetX = 0
+            ctx.shadowOffsetY = 20
+            originalStroke.apply(this, arguments)
+            ctx.restore()
+          }
+          
+          Chart.elements.Line.prototype.draw.apply(this, arguments)
+          
+          ctx.stroke = originalStroke;
+        }
+      })
+      
+      Chart.defaults.ShadowLine = Chart.defaults.line
+      Chart.controllers.ShadowLine = Chart.controllers.line.extend({
+        datasetElementType: ShadowLineElement
+      })
 
-    var ctx = document.getElementById("myChart").getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
+    const ctx = document.getElementById("myChart").getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'ShadowLine',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["10:40", "10:50", "11:00", "11:10", "11:20", "11:30", "11:40", "11:50", "12:00","12:10"],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: '',
+                radius: 0,
+                pointBackgroundColor: '#8BC34A',
+                pointHoverRadius: 10,
+                pointHoverBorderColor: '#8BC34A',
+                pointHoverBackgroundColor: '#FFF',
+                data: [4210 ,8010 ,5210 ,9750 ,12005 ,15035 ,16042 ,18251 ,28640 ,46000],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    '#8BC34A33'
                 ],
                 borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                    '#8BC34A'
                 ],
-                borderWidth: 1
+                borderWidth: 3
             }]
         },
         options: {
+            layout: {
+                padding: {
+                    left: -10,
+                    right: 0,
+                    top: 0,
+                    bottom: -10
+                }
+            },
+            bezierCurve: false,
+            legend: {
+                display: false
+            },
+            maintainAspectRatio: false,
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero:true
+                        suggestedMin: 0,
+                        max: 50000,
+                        stepSize: 10000,
+                        beginAtZero:true,
+                        fontColor: '#AAA',
+                        display: false
+                    },
+                    gridLines: {
+                        drawBorder: false,
+                        color: "#EEE"
+                    }
+                }],
+                xAxes: [{
+                    gridLines: {
+                        display: false,
+                        drawBorder: false,
+                        color: "#EEE"
+                    },
+                    ticks: {
+                        fontColor: '#AAA',
+                        display: false,
+                        padding: 0
                     }
                 }]
             }

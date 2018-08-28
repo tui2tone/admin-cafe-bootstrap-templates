@@ -5,14 +5,19 @@
 </head>
 
 <body class="app-wrapper app-default">
-    <%= require('html-loader!./components/navbar/navbar.html') %>
         <div class="app-main-wrapper">
             <%= require('html-loader!./components/sidebar/sidebar.html') %>
                 <main class="app-container">
                     <div class="app-header">
-                        <div class="container-fluid">
-                            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2">
-                                <h3 class="app-title">Form</h3>
+                        <div class="app-header-left">
+                            <h3 class="app-title">Form</h3>
+                        </div>
+                        <div class="app-header-center">
+                            <div class="app-header-search">
+                                <div class="input-search-container">
+                                    <input class="form-control" type="text" placeholder="ค้นหา">
+                                    <i class="icon fas fa-search"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
