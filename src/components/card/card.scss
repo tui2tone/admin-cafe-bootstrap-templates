@@ -1,14 +1,22 @@
 .card {
     border: 1px solid rgba(0,0,0,.075);
     margin-bottom: 15px;
-    box-shadow: 1px 2px 4px 0 rgba(0,0,0,.05);
+    box-shadow: 1px 3px 10px 0 rgba(0,0,0,.05);
     overflow: hidden;
-    border-radius: 2px;
+    border-radius: 3px;
 
     .card-header {
         border-bottom: 0;
         color: $color-font;
         box-shadow: 1px 1px 1px 0 rgba(0,0,0,.1);
+    }
+
+    .card-bg {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
     }
     
 }
